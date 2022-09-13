@@ -93,6 +93,8 @@
 		5D4D308928BEE31500CA1210 /* FoodIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D308828BEE31500CA1210 /* FoodIngredient.swift */; };
 		5D4D308B28BEE35300CA1210 /* FoodRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D308A28BEE35300CA1210 /* FoodRecipe.swift */; };
 		5D4D308D28BEE3AA00CA1210 /* ChefRecipesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D308C28BEE3AA00CA1210 /* ChefRecipesModel.swift */; };
+		5D658D8E28D0392100691824 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D658D8D28D0392100691824 /* TimerView.swift */; };
+		5D658D9128D0672800691824 /* LimitTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D658D9028D0672800691824 /* LimitTextEditorView.swift */; };
 		5D7833C228BEEECD00BC0EB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D24D41228B6F7590022CFC9 /* Assets.xcassets */; };
 		5D7833C328BEEED100BC0EB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D24D41528B6F7590022CFC9 /* Preview Assets.xcassets */; };
 		5D7833C428BEEEF000BC0EB3 /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D17653928B76ACF002FEE39 /* places.json */; };
@@ -100,6 +102,10 @@
 		5D7833C628BEEEF700BC0EB3 /* NutritionFactsAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1765DB28BC4EB3002FEE39 /* NutritionFactsAssets.xcassets */; };
 		5D7833C728BEEEFB00BC0EB3 /* Recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D4D308228BEE29B00CA1210 /* Recipes.json */; };
 		5D9B2B6228C9A470007EA40A /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B2B6128C9A470007EA40A /* MyTabView.swift */; };
+		5D9B2B6528C9D6AA007EA40A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B2B6428C9D6AA007EA40A /* Loader.swift */; };
+		5D9B2B6728C9D78F007EA40A /* Booked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B2B6628C9D78F007EA40A /* Booked.swift */; };
+		5D9B2B6928C9E04B007EA40A /* TaxiMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B2B6828C9E04B007EA40A /* TaxiMapView.swift */; };
+		5D9B2B6B28CFFB8F007EA40A /* TaxiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9B2B6A28CFFB8F007EA40A /* TaxiView.swift */; };
 		5DA250A328BEF0EA009F908E /* ChefSecretsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA250A228BEF0EA009F908E /* ChefSecretsView.swift */; };
 		5DA250A528BEF10B009F908E /* IngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA250A428BEF10B009F908E /* IngredientView.swift */; };
 		5DA250A728BEF162009F908E /* RecipeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA250A628BEF162009F908E /* RecipeImage.swift */; };
@@ -212,7 +218,13 @@
 		5D4D308828BEE31500CA1210 /* FoodIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodIngredient.swift; sourceTree = "<group>"; };
 		5D4D308A28BEE35300CA1210 /* FoodRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecipe.swift; sourceTree = "<group>"; };
 		5D4D308C28BEE3AA00CA1210 /* ChefRecipesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefRecipesModel.swift; sourceTree = "<group>"; };
+		5D658D8D28D0392100691824 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		5D658D9028D0672800691824 /* LimitTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitTextEditorView.swift; sourceTree = "<group>"; };
 		5D9B2B6128C9A470007EA40A /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
+		5D9B2B6428C9D6AA007EA40A /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		5D9B2B6628C9D78F007EA40A /* Booked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booked.swift; sourceTree = "<group>"; };
+		5D9B2B6828C9E04B007EA40A /* TaxiMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiMapView.swift; sourceTree = "<group>"; };
+		5D9B2B6A28CFFB8F007EA40A /* TaxiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxiView.swift; sourceTree = "<group>"; };
 		5DA250A228BEF0EA009F908E /* ChefSecretsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefSecretsView.swift; sourceTree = "<group>"; };
 		5DA250A428BEF10B009F908E /* IngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientView.swift; sourceTree = "<group>"; };
 		5DA250A628BEF162009F908E /* RecipeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeImage.swift; sourceTree = "<group>"; };
@@ -530,6 +542,9 @@
 				5D17661F28BCA390002FEE39 /* DraggableMap */,
 				5D4D308028BEE26E00CA1210 /* Chef Secrets */,
 				5D9B2B6028C9A459007EA40A /* MyTab */,
+				5D9B2B6328C9D685007EA40A /* Taxi */,
+				5D658D8C28D0391700691824 /* Timer */,
+				5D658D8F28D0671300691824 /* LimitTextEditor */,
 				5D24D41228B6F7590022CFC9 /* Assets.xcassets */,
 				5D17654128B84C3C002FEE39 /* playground.swift */,
 				5D24D41428B6F7590022CFC9 /* Preview Content */,
@@ -666,12 +681,39 @@
 			path = "Recipe Detail";
 			sourceTree = "<group>";
 		};
+		5D658D8C28D0391700691824 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				5D658D8D28D0392100691824 /* TimerView.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		5D658D8F28D0671300691824 /* LimitTextEditor */ = {
+			isa = PBXGroup;
+			children = (
+				5D658D9028D0672800691824 /* LimitTextEditorView.swift */,
+			);
+			path = LimitTextEditor;
+			sourceTree = "<group>";
+		};
 		5D9B2B6028C9A459007EA40A /* MyTab */ = {
 			isa = PBXGroup;
 			children = (
 				5D9B2B6128C9A470007EA40A /* MyTabView.swift */,
 			);
 			path = MyTab;
+			sourceTree = "<group>";
+		};
+		5D9B2B6328C9D685007EA40A /* Taxi */ = {
+			isa = PBXGroup;
+			children = (
+				5D9B2B6A28CFFB8F007EA40A /* TaxiView.swift */,
+				5D9B2B6828C9E04B007EA40A /* TaxiMapView.swift */,
+				5D9B2B6628C9D78F007EA40A /* Booked.swift */,
+				5D9B2B6428C9D6AA007EA40A /* Loader.swift */,
+			);
+			path = Taxi;
 			sourceTree = "<group>";
 		};
 		5DA250B028BEFC6E009F908E /* Alba */ = {
@@ -814,7 +856,9 @@
 				5D1765BD28B8A455002FEE39 /* Animations.swift in Sources */,
 				5D17654A28B86682002FEE39 /* MapSearchView.swift in Sources */,
 				5DFA986C28C0462A00C37D37 /* SalarySettingViewModel.swift in Sources */,
+				5D9B2B6928C9E04B007EA40A /* TaxiMapView.swift in Sources */,
 				5D1765AB28B89812002FEE39 /* AsyncModel.swift in Sources */,
+				5D9B2B6528C9D6AA007EA40A /* Loader.swift in Sources */,
 				5DA250AD28BEF413009F908E /* IngredientSuggestionView.swift in Sources */,
 				5D24D43B28B72BC00022CFC9 /* ReviewAndImageStack.swift in Sources */,
 				5D1765E928BC584D002FEE39 /* Order.swift in Sources */,
@@ -849,6 +893,7 @@
 				5D24D41128B6F7580022CFC9 /* ContentView.swift in Sources */,
 				5D17653C28B76AD9002FEE39 /* Place.swift in Sources */,
 				5D17652A28B75163002FEE39 /* MovieStore.swift in Sources */,
+				5D9B2B6B28CFFB8F007EA40A /* TaxiView.swift in Sources */,
 				5D17655028B87E5E002FEE39 /* TitleView.swift in Sources */,
 				5D17661D28BC9272002FEE39 /* Hive.swift in Sources */,
 				5D1765CD28B8AED9002FEE39 /* Ingredient+SwiftUI.swift in Sources */,
@@ -861,6 +906,7 @@
 				5DA250A928BEF1BD009F908E /* RecipeDetailView.swift in Sources */,
 				5D17654828B86614002FEE39 /* LocationView.swift in Sources */,
 				5D1765B128B89B23002FEE39 /* AsyncEncodedModelSequence.swift in Sources */,
+				5D658D8E28D0392100691824 /* TimerView.swift in Sources */,
 				5D17652628B73CC3002FEE39 /* MovieRow.swift in Sources */,
 				5DA250C728BF4E00009F908E /* SwiftUIEnvironment.swift in Sources */,
 				5D1765C928B8AE05002FEE39 /* MeasuredIngredient.swift in Sources */,
@@ -877,6 +923,7 @@
 				5D24D42028B6F7F20022CFC9 /* Constants.swift in Sources */,
 				5D17654028B84C0C002FEE39 /* LoadingQuery.swift in Sources */,
 				5D17653428B75CDF002FEE39 /* SpinnerView.swift in Sources */,
+				5D658D9128D0672800691824 /* LimitTextEditorView.swift in Sources */,
 				5D4D308928BEE31500CA1210 /* FoodIngredient.swift in Sources */,
 				5DA250B728BEFF1B009F908E /* SalarySettingView.swift in Sources */,
 				5D24D42228B6F9C60022CFC9 /* Game.swift in Sources */,
@@ -889,6 +936,7 @@
 				5D24D43528B713FD0022CFC9 /* Book.swift in Sources */,
 				5D24D42E28B70E900022CFC9 /* Shapes.swift in Sources */,
 				5D24D42628B6FE3A0022CFC9 /* TextViews.swift in Sources */,
+				5D9B2B6728C9D78F007EA40A /* Booked.swift in Sources */,
 				5D17652428B73AE3002FEE39 /* UserView.swift in Sources */,
 				5D24D43928B717F00022CFC9 /* PHPickerViewController.swift in Sources */,
 				5DA250AF28BEF4EE009F908E /* RecipesView.swift in Sources */,

@@ -56,6 +56,11 @@ struct ContentView: View {
                             MyTabView()
                         }
                     }
+                    HStack {
+                        NavigationLink("Taxi Map") {
+                            TaxiView()
+                        }
+                    }
                 }
             }
         }
