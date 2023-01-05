@@ -12,8 +12,8 @@ struct TaxiView: View {
     @State private var map = MKMapView()
     @State private var manager = CLLocationManager()
     @State private var alert = false
-    @State private var source: CLLocationCoordinate2D!
-    @State private var destination: CLLocationCoordinate2D!
+    @State private var source: CLLocationCoordinate2D = .init()
+    @State private var destination: CLLocationCoordinate2D? = nil
     @State private var txt = ""
     @State private var name = ""
     @State private var distance = ""

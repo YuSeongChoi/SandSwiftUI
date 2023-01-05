@@ -9,11 +9,15 @@ import SwiftUI
 
 @main
 struct SandTutorialApp: App {
+    
+    @StateObject private var model = Model()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(Library())
                 .environmentObject(UserStore())
+                .environmentObject(model)
         }
     }
     

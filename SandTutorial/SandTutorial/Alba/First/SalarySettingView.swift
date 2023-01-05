@@ -411,10 +411,3 @@ struct SalarySettingView: View {
             .background(Color.init(red: 248/255, green: 248/255, blue: 248/255))
     }
 }
-
-
-struct SalarySettingView_Previews: PreviewProvider {
-    static var previews: some View {
-        SalarySettingView()
-    }
-}

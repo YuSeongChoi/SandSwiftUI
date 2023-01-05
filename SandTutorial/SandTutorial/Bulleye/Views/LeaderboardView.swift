@@ -16,7 +16,7 @@ struct LeaderboardView: View {
             Color("BackgroundColor").edgesIgnoringSafeArea(.all)
             VStack(spacing: 10) {
                 HeaderView(leaderboardIsShowing: $leaderboardIsShowing)
-                LabelView()
+                LabelView2()
                 ScrollView {
                     VStack(spacing: 10) {
                         ForEach(game.leaderboardEntries.indices) { i in
@@ -85,7 +85,7 @@ struct HeaderView: View {
     }
 }
 
-struct LabelView: View {
+struct LabelView2: View {
     var body: some View {
         HStack {
             Spacer()

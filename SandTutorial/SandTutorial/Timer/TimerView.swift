@@ -42,7 +42,7 @@ final class TimerViewModel: ObservableObject, Identifiable {
                     return true
                 }
                 return false
-            }
+            } 
             .sink(receiveValue: { [weak self] (isValid) in
                 self?.textIsValid = isValid
             })

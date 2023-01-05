@@ -13,8 +13,8 @@ struct TaxiMapView: UIViewRepresentable {
     @Binding var map: MKMapView
     @Binding var manager: CLLocationManager
     @Binding var alert: Bool
-    @Binding var source: CLLocationCoordinate2D!
-    @Binding var destination: CLLocationCoordinate2D!
+    @Binding var source: CLLocationCoordinate2D
+    @Binding var destination: CLLocationCoordinate2D?
     @Binding var txt: String
     @Binding var name: String
     @Binding var time: String
@@ -61,31 +61,33 @@ struct TaxiMapView: UIViewRepresentable {
         
         @objc func Tap(ges: UITapGestureRecognizer) {
             let location = ges.location(in: self.parent.map)
+            print("LCK location : \(location)")
             let mplocation = self.parent.map.convert(location, toCoordinateFrom: self.parent.map)
+            print("LCK mplocation : \(mplocation)")
             let point = MKPointAnnotation()
             point.title = "Source"
             point.subtitle = "Destination"
             
-            
             let decoder = CLGeocoder()
             decoder.reverseGeocodeLocation(CLLocation(latitude: mplocation.latitude, longitude: mplocation.longitude)) { places, error in
                 if error != nil {
-                    print(error?.localizedDescription)
+                    print("LCK ERROR ! : \(error?.localizedDescription)")
                     return
                 }
                 self.parent.name = places?.first?.name ?? ""
                 point.title = places?.first?.name ?? ""
                 self.parent.show = true
             }
-            
+            print("LCK parent : \(parent)")
             let req = MKDirections.Request()
             req.source = MKMapItem(placemark: MKPlacemark(coordinate: self.parent.source))
             req.destination = MKMapItem(placemark: MKPlacemark(coordinate: mplocation))
-            
+            print("LCK req : \(req)")
             let direction = MKDirections(request: req)
+            print("LCK direction : \(direction)")
             direction.calculate { dir, error in
                 if error != nil {
-                    print(error?.localizedDescription)
+                    print("LCK direction ERROR : \(error?.localizedDescription)")
                     return
                 }
                 
