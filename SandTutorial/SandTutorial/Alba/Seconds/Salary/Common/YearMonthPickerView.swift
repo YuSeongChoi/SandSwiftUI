@@ -25,7 +25,6 @@ struct YearMonthPickerView: View {
                     presentationMode.wrappedValue.dismiss()
                 }
             
-            // MARK: - YearMonth Picker
             VStack(spacing: 0) {
                 Button {
                     // TODO: 월 선택
