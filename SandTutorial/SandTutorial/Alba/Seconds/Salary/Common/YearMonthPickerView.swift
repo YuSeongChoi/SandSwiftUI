@@ -10,11 +10,14 @@ import SwiftUI
 struct YearMonthPickerView: View {
     
     @Environment(\.presentationMode) private var presentationMode
-    @State private var selectedYear: Int = Date().year
-    @State private var selectedMonth: Int = Date().month
+    @Binding var selectedDate: Date
+    @State private var selectedYear: Int = 0
+    @State private var selectedMonth: Int = 0
     
     private let years = [Int](Date().year - 100 ... Date().year + 100)
     private let months = [Int](1...12)
+    
+    var onClick: @MainActor () -> ()
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -28,6 +31,8 @@ struct YearMonthPickerView: View {
             VStack(spacing: 0) {
                 Button {
                     // TODO: 월 선택
+                    selectedDate = makeDate(year: selectedYear, month: selectedMonth)
+                    onClick()
                     presentationMode.wrappedValue.dismiss()
                 } label: {
                     Text("확인")
@@ -57,12 +62,16 @@ struct YearMonthPickerView: View {
             }
             .background(.white)
         }
+        .onAppear {
+            selectedYear = selectedDate.year
+            selectedMonth = selectedDate.month
+        }
     }
     
-}
-
-struct YearMonthPickerView_Previews: PreviewProvider {
-    static var previews: some View {
-        YearMonthPickerView()
+    private func makeDate(year: Int, month: Int) -> Date {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM"
+        return formatter.date(from: "\(year)-\(month)") ?? Date()
     }
+    
 }

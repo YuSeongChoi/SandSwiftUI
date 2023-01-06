@@ -11,9 +11,15 @@ struct PaymentCopyView: View {
     
     @Environment(\.presentationMode) private var presentationMode
     @State private var selectedMonthToggle: Bool = false
-    @State private var selectedMonth: Date = Date()
+    @State private var initDateToggle: Bool = false
+    @State private var selectedDate: Date = Date()
     
     private let borderColor = Color(red: 228/255, green: 228/255, blue: 228/255)
+    private let dateForamtter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy년 MM월"
+        return formatter
+    }()
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -43,17 +49,28 @@ struct PaymentCopyView: View {
                         .frame(height: 55)
                         .border(borderColor, width: 1)
                         .overlay(
-                            Text("월 선택")
-                                .foregroundColor(.black)
-                                .font(.system(size: 20, weight: .bold))
-                                .frame(alignment: .center)
+                            HStack {
+                                if initDateToggle {
+                                    Text(dateForamtter.string(from: selectedDate))
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 20, weight: .bold))
+                                        .frame(alignment: .center)
+                                } else {
+                                    Text("월 선택")
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 20, weight: .bold))
+                                        .frame(alignment: .center)
+                                }
+                            }
                         )
                 }
                 .padding([.leading, .trailing], 22)
                 .fullScreenCover(isPresented: $selectedMonthToggle) {
-//                    monthSelectionView()
                     // TODO: YearMonth Picker
-                    YearMonthPickerView()
+                    YearMonthPickerView(selectedDate: $selectedDate) { 
+                        initDateToggle.toggle()
+                    }
+                        
                 }
                 
                 Button {
@@ -77,45 +94,6 @@ struct PaymentCopyView: View {
             .padding(.vertical, 50)
             .background(RoundedRectangle(cornerRadius: 15).fill(.white))
         }
-        .ignoresSafeArea()
-    }
-    
-    @ViewBuilder
-    private func monthSelectionView() -> some View {
-        ZStack(alignment: .bottom) {
-            Color.black
-                .opacity(0.3)
-                .edgesIgnoringSafeArea(.all)
-                .clearModalBackground()
-                .onTapGesture {
-                    selectedMonthToggle.toggle()
-                }
-            
-            VStack(spacing: 0) {
-                Button {
-                    // TODO: 확인
-                    selectedMonthToggle.toggle()
-                } label: {
-                    Rectangle()
-                        .fill(.yellow)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 55)
-                        .overlay(
-                            Text("확인")
-                                .foregroundColor(.white)
-                                .font(.system(size: 17, weight: .medium))
-                                .frame(alignment: .center)
-                        )
-                }
-                
-                DatePicker("", selection: $selectedMonth, displayedComponents: .date)
-                    .datePickerStyle(.wheel)
-                    .labelsHidden()
-                    .frame(maxWidth: .infinity, idealHeight: 200)
-                    .background(.white)
-            }
-        }
-        .clearModalBackground()
         .ignoresSafeArea()
     }
     
