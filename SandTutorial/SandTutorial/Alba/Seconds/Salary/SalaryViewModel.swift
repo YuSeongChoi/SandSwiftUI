@@ -53,7 +53,7 @@ final class SalaryViewModel: ObservableObject, Identifiable {
     }
     
     func dateToStringMonth(date: Date) -> String {
-        return date.string(format: "YYYY / MM")
+        return date.string(format: "YYYY/MM")
     }
     
 }

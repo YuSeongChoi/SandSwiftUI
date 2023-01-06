@@ -17,6 +17,15 @@ struct SalaryDetailView: View {
     @State private var copyPaymentToggle: Bool = false
     @State private var selectMonthToggle: Bool = false
     
+    @State private var emailToggle: Bool = true
+    @State private var smsToggle: Bool = false
+    
+    var selectedUserNumber: Int {
+        get {
+            let num = viewModel.employeeList.map(\.checkToggle).filter{ $0 == true }
+            return num.count
+        }
+    }
     
     let selectedDate: Date
     let borderColor = Color(red: 228/255, green: 228/255, blue: 228/255)
@@ -42,7 +51,7 @@ struct SalaryDetailView: View {
                 }
             }
             bottomButtonView
-        }
+        }.padding(.top, 1)
     }
     
     @ViewBuilder
@@ -108,20 +117,19 @@ struct SalaryDetailView: View {
                 employee.wrappedValue.checkToggle.toggle()
             }
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 3) {
                 HStack {
-                    Text("총급여")
+                    Text("총급여").foregroundColor(.gray)
                     Spacer()
                     Text(decimalFormatter.string(from: employee.wrappedValue.totalSalary as NSNumber) ?? "0 원")
                 }
                 HStack {
-                    Text("공제액")
+                    Text("공제액").foregroundColor(.gray)
                     Spacer()
                     Text(decimalFormatter.string(from: employee.wrappedValue.deductedAmount as NSNumber) ?? "0 원")
                 }
                 HStack {
-                    Text("지급액")
-                        .foregroundColor(.yellow)
+                    Text("지급액").foregroundColor(.yellow)
                     Spacer()
                     Text(decimalFormatter.string(from: employee.wrappedValue.paymentAmount as NSNumber) ?? "0 원")
                 }
@@ -148,9 +156,9 @@ struct SalaryDetailView: View {
                     .border(.yellow, width: 1)
             }
             .fullScreenCover(isPresented: $paycheckToggle) {
-                paycheckView()
-                    .clearModalBackground()
-                    .ignoresSafeArea()
+                PayslipView(selectedUserNumber: selectedUserNumber, emailToggle: $emailToggle, smsToggle: $smsToggle) {
+                    print("LCK SEND TOGGLE")
+                }
             }
             
             Button {
@@ -163,9 +171,7 @@ struct SalaryDetailView: View {
                     .border(.yellow, width: 1)
             }
             .fullScreenCover(isPresented: $copyPaymentToggle) {
-                copyPaymentView()
-                    .clearModalBackground()
-                    .ignoresSafeArea()
+                PaymentCopyView()
             }
             
             Button {
@@ -180,181 +186,6 @@ struct SalaryDetailView: View {
         }
         .font(.system(size: 14))
         .padding(EdgeInsets(top: 15, leading: 22, bottom: 30, trailing: 22))
-    }
-    
-    @ViewBuilder
-    private func paycheckView() -> some View {
-        ZStack(alignment: .bottom) {
-            Color.black
-                .opacity(0.3)
-                .edgesIgnoringSafeArea(.all)
-                .clearModalBackground()
-                .onTapGesture {
-                    paycheckToggle.toggle()
-                }
-            
-            VStack(spacing: 20) {
-                HStack {
-                    Text("선택 : ") +
-                    Text("3").foregroundColor(.yellow) +
-                    Text("명")
-                }.font(.system(size: 20, weight: .bold))
-                
-                HStack(spacing: 10) {
-                    Button {
-                        
-                    } label: {
-                        Label {
-                            Text("E-mail")
-                                .foregroundColor(.black)
-                        } icon: {
-                            Image(systemName: "circle")
-                                .foregroundColor(borderColor)
-                        }
-                    }
-                    .frame(maxWidth: .infinity, minHeight: 55, alignment: .leading)
-                    .padding(.leading, 14)
-                    .border(borderColor, width: 1)
-                    
-                    Button {
-                        
-                    } label: {
-                        Label {
-                            Text("SMS")
-                                .foregroundColor(.black)
-                        } icon: {
-                            Image(systemName: "circle")
-                                .foregroundColor(borderColor)
-                        }
-                    }
-                    .frame(maxWidth: .infinity, minHeight: 55, alignment: .leading)
-                    .padding(.leading, 14)
-                    .border(borderColor, width: 1)
-                }
-                .font(.system(size: 16))
-                .padding([.leading, .trailing], 22)
-                
-                Text("급여명세서를 발송하시겠습니까?").font(.system(size: 16))
-                
-                Button {
-                    
-                } label: {
-                    Rectangle()
-                        .fill(Color.yellow)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 55)
-                        .overlay(
-                            Text("발송")
-                                .foregroundColor(.white)
-                                .font(.system(size: 17, weight: .medium))
-                                .frame(alignment: .center)
-                        )
-                        .padding([.leading, .trailing], 22)
-                }
-            }
-            .frame(width: UIScreen.main.bounds.width)
-            .padding([.top, .bottom], 40)
-            .background(RoundedRectangle(cornerRadius: 15).fill(.white))
-        }
-    }
-    
-    @ViewBuilder
-    private func copyPaymentView() -> some View {
-        ZStack(alignment: .bottom) {
-            Color.black
-                .opacity(0.3)
-                .edgesIgnoringSafeArea(.all)
-                .clearModalBackground()
-                .onTapGesture {
-                    copyPaymentToggle.toggle()
-                }
-            
-            VStack(spacing: 20) {
-                Text("선택한 월의 급여를 복사하시겠습니까?")
-                    .font(.system(size: 17, weight: .regular))
-                Text("* 급여 복사 시 전 직원의 급여가 복사됩니다.")
-                    .font(.system(size: 13, weight: .regular))
-                    .foregroundColor(.red)
-                
-                Button {
-                    // TODO: 월 선택
-                    selectMonthToggle.toggle()
-                } label: {
-                    Rectangle()
-                        .fill(.white)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 55)
-                        .border(borderColor, width: 1)
-                        .overlay(
-                            Text("월 선택")
-                                .foregroundColor(.black)
-                                .font(.system(size: 20, weight: .bold))
-                                .frame(alignment: .center)
-                        )
-                }
-                .padding([.leading, .trailing], 22)
-                .fullScreenCover(isPresented: $selectMonthToggle) {
-                    monthSelectionView()
-                }
-
-                Button {
-                    copyPaymentToggle.toggle()
-                } label: {
-                    Rectangle()
-                        .fill(.yellow)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 55)
-                        .overlay(
-                            Text("예")
-                                .foregroundColor(.white)
-                                .font(.system(size: 17, weight: .medium))
-                                .frame(alignment: .center)
-                        )
-                }.padding([.leading, .trailing], 22)
-            }
-            .frame(width: UIScreen.main.bounds.width)
-            .padding([.top, .bottom], 40)
-            .background(RoundedRectangle(cornerRadius: 15).fill(.white))
-        }
-    }
-    
-    @ViewBuilder
-    private func monthSelectionView() -> some View {
-        ZStack(alignment: .bottom) {
-            Color.black
-                .opacity(0.3)
-                .edgesIgnoringSafeArea(.all)
-                .clearModalBackground()
-                .onTapGesture {
-                    selectMonthToggle.toggle()
-                }
-            
-            VStack(spacing: 0) {
-                Button {
-                    // TODO: 확인
-                    selectMonthToggle.toggle()
-                } label: {
-                    Rectangle()
-                        .fill(.yellow)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 55)
-                        .overlay(
-                            Text("확인")
-                                .foregroundColor(.white)
-                                .font(.system(size: 17, weight: .medium))
-                                .frame(alignment: .center)
-                        )
-                }
-                // TODO: DATEPICKER
-                DatePicker("", selection: $selectedMonth, displayedComponents: .date)
-                    .datePickerStyle(.wheel)
-                    .labelsHidden()
-                    .frame(maxWidth: .infinity, idealHeight: 200)
-                    .background(.white)
-            }
-        }
-        .clearModalBackground()
-        .ignoresSafeArea()
     }
     
 }

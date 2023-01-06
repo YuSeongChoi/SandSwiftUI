@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SalarySettingView: View {
+    
     enum WorktimeKind {
         case regularStart
         case regularEnd

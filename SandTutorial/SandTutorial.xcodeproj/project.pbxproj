@@ -99,6 +99,7 @@
 		5D4D308D28BEE3AA00CA1210 /* ChefRecipesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D308C28BEE3AA00CA1210 /* ChefRecipesModel.swift */; };
 		5D658D8E28D0392100691824 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D658D8D28D0392100691824 /* TimerView.swift */; };
 		5D658D9128D0672800691824 /* LimitTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D658D9028D0672800691824 /* LimitTextEditorView.swift */; };
+		5D75F5D02967AC59000156B1 /* YearMonthPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D75F5CF2967AC59000156B1 /* YearMonthPickerView.swift */; };
 		5D7833C228BEEECD00BC0EB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D24D41228B6F7590022CFC9 /* Assets.xcassets */; };
 		5D7833C328BEEED100BC0EB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D24D41528B6F7590022CFC9 /* Preview Assets.xcassets */; };
 		5D7833C428BEEEF000BC0EB3 /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D17653928B76ACF002FEE39 /* places.json */; };
@@ -223,6 +224,8 @@
 		5DB611A528D41A04002E7BB5 /* GradientControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB611A428D41A04002E7BB5 /* GradientControl.swift */; };
 		5DB611A728D45B7C002E7BB5 /* GradientDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB611A628D45B7C002E7BB5 /* GradientDetailView.swift */; };
 		5DB611A928D45E1D002E7BB5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB611A828D45E1D002E7BB5 /* GradientView.swift */; };
+		5DDE084829669C78002FCEB2 /* PayslipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDE084729669C78002FCEB2 /* PayslipView.swift */; };
+		5DDE084A29669D37002FCEB2 /* PaymentCopyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDE084929669D37002FCEB2 /* PaymentCopyView.swift */; };
 		5DDF9E18294FF6C5005A9ED0 /* NaviDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E17294FF6C5005A9ED0 /* NaviDemoView.swift */; };
 		5DDF9E2729503632005A9ED0 /* SudokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E2629503632005A9ED0 /* SudokuView.swift */; };
 		5DDF9E2929503638005A9ED0 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDF9E2829503638005A9ED0 /* SquareView.swift */; };
@@ -334,6 +337,7 @@
 		5D4D308C28BEE3AA00CA1210 /* ChefRecipesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefRecipesModel.swift; sourceTree = "<group>"; };
 		5D658D8D28D0392100691824 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		5D658D9028D0672800691824 /* LimitTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitTextEditorView.swift; sourceTree = "<group>"; };
+		5D75F5CF2967AC59000156B1 /* YearMonthPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearMonthPickerView.swift; sourceTree = "<group>"; };
 		5D8B60BD28FE4567003A0924 /* PathMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathMenu.swift; sourceTree = "<group>"; };
 		5D8B60BF28FE48EE003A0924 /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		5D8B60C128FE6171003A0924 /* GlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowView.swift; sourceTree = "<group>"; };
@@ -451,6 +455,8 @@
 		5DB611A428D41A04002E7BB5 /* GradientControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientControl.swift; sourceTree = "<group>"; };
 		5DB611A628D45B7C002E7BB5 /* GradientDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientDetailView.swift; sourceTree = "<group>"; };
 		5DB611A828D45E1D002E7BB5 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		5DDE084729669C78002FCEB2 /* PayslipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayslipView.swift; sourceTree = "<group>"; };
+		5DDE084929669D37002FCEB2 /* PaymentCopyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCopyView.swift; sourceTree = "<group>"; };
 		5DDF9E17294FF6C5005A9ED0 /* NaviDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviDemoView.swift; sourceTree = "<group>"; };
 		5DDF9E2629503632005A9ED0 /* SudokuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuView.swift; sourceTree = "<group>"; };
 		5DDF9E2829503638005A9ED0 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
@@ -1227,6 +1233,7 @@
 		5DA250BA28BEFF56009F908E /* Salary */ = {
 			isa = PBXGroup;
 			children = (
+				5DDE084629669C5D002FCEB2 /* Common */,
 				5DA250BC28BEFF90009F908E /* SalaryView.swift */,
 				5D1E272928C17BEC00C05FF9 /* SalaryDetailView.swift */,
 				5D1E272328C09B7700C05FF9 /* SalaryViewModel.swift */,
@@ -1298,6 +1305,16 @@
 			children = (
 			);
 			path = Chart;
+			sourceTree = "<group>";
+		};
+		5DDE084629669C5D002FCEB2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5DDE084729669C78002FCEB2 /* PayslipView.swift */,
+				5DDE084929669D37002FCEB2 /* PaymentCopyView.swift */,
+				5D75F5CF2967AC59000156B1 /* YearMonthPickerView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		5DDF9E16294FF6AB005A9ED0 /* NaviDemo */ = {
@@ -1529,6 +1546,7 @@
 				5D4D308B28BEE35300CA1210 /* FoodRecipe.swift in Sources */,
 				5DA250A728BEF162009F908E /* RecipeImage.swift in Sources */,
 				5D8BA90228F541D900741A57 /* DotsAnimation.swift in Sources */,
+				5D75F5D02967AC59000156B1 /* YearMonthPickerView.swift in Sources */,
 				5D8BA8A528EE727400741A57 /* OrderPlacedView.swift in Sources */,
 				5D17652828B75097002FEE39 /* RatingView.swift in Sources */,
 				5D1765D528BC4E19002FEE39 /* Ingredient+NutritionFacts.swift in Sources */,
@@ -1594,6 +1612,7 @@
 				5D8BA92328F8F35D00741A57 /* HeroAnimationView.swift in Sources */,
 				5D17661028BC925B002FEE39 /* Minimap.swift in Sources */,
 				5D8BA93928F9536300741A57 /* GeometryView2.swift in Sources */,
+				5DDE084829669C78002FCEB2 /* PayslipView.swift in Sources */,
 				5DDF9E2729503632005A9ED0 /* SudokuView.swift in Sources */,
 				5D8BA8EF28F4EC7100741A57 /* Helper.swift in Sources */,
 				5DA250AB28BEF39C009F908E /* NameSuggestionView.swift in Sources */,
@@ -1635,6 +1654,7 @@
 				5D8BA91A28F8062900741A57 /* HighAnimationView2.swift in Sources */,
 				5D8BA8AC28EE8D1000741A57 /* SmoothieRow.swift in Sources */,
 				5DB6119F28D3F3A4002E7BB5 /* GradientModelStore.swift in Sources */,
+				5DDE084A29669D37002FCEB2 /* PaymentCopyView.swift in Sources */,
 				5D1765CB28B8AE65002FEE39 /* Ingredient.swift in Sources */,
 				5D8BA8DE28EFBD1400741A57 /* AppTabNavigation.swift in Sources */,
 				5D8BA8B428EE905000741A57 /* SmoothieView.swift in Sources */,
