@@ -92,6 +92,7 @@
 		5D24D43F28B72FC00022CFC9 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24D43E28B72FC00022CFC9 /* DetailView.swift */; };
 		5D24D44128B730A90022CFC9 /* NewBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24D44028B730A90022CFC9 /* NewBookView.swift */; };
 		5D24D44328B7316D0022CFC9 /* ReadMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D24D44228B7316D0022CFC9 /* ReadMeView.swift */; };
+		5D3817E5296BF58200E21053 /* SalaryInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3817E4296BF58200E21053 /* SalaryInfoView.swift */; };
 		5D3AB8C6290BB3740088E9C1 /* SalaryListCalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3AB8C5290BB3740088E9C1 /* SalaryListCalendarViewModel.swift */; };
 		5D3ABB2A290FAB660088E9C1 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3ABB29290FAB660088E9C1 /* CalendarView.swift */; };
 		5D4D308928BEE31500CA1210 /* FoodIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D308828BEE31500CA1210 /* FoodIngredient.swift */; };
@@ -100,6 +101,7 @@
 		5D658D8E28D0392100691824 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D658D8D28D0392100691824 /* TimerView.swift */; };
 		5D658D9128D0672800691824 /* LimitTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D658D9028D0672800691824 /* LimitTextEditorView.swift */; };
 		5D75F5D02967AC59000156B1 /* YearMonthPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D75F5CF2967AC59000156B1 /* YearMonthPickerView.swift */; };
+		5D75F5D32967EA26000156B1 /* DemoCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D75F5D22967EA26000156B1 /* DemoCalendarView.swift */; };
 		5D7833C228BEEECD00BC0EB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D24D41228B6F7590022CFC9 /* Assets.xcassets */; };
 		5D7833C328BEEED100BC0EB3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D24D41528B6F7590022CFC9 /* Preview Assets.xcassets */; };
 		5D7833C428BEEEF000BC0EB3 /* places.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D17653928B76ACF002FEE39 /* places.json */; };
@@ -329,6 +331,7 @@
 		5D24D43E28B72FC00022CFC9 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		5D24D44028B730A90022CFC9 /* NewBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBookView.swift; sourceTree = "<group>"; };
 		5D24D44228B7316D0022CFC9 /* ReadMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMeView.swift; sourceTree = "<group>"; };
+		5D3817E4296BF58200E21053 /* SalaryInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryInfoView.swift; sourceTree = "<group>"; };
 		5D3AB8C5290BB3740088E9C1 /* SalaryListCalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryListCalendarViewModel.swift; sourceTree = "<group>"; };
 		5D3ABB29290FAB660088E9C1 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		5D4D308228BEE29B00CA1210 /* Recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Recipes.json; sourceTree = "<group>"; };
@@ -338,6 +341,7 @@
 		5D658D8D28D0392100691824 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		5D658D9028D0672800691824 /* LimitTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitTextEditorView.swift; sourceTree = "<group>"; };
 		5D75F5CF2967AC59000156B1 /* YearMonthPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearMonthPickerView.swift; sourceTree = "<group>"; };
+		5D75F5D22967EA26000156B1 /* DemoCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCalendarView.swift; sourceTree = "<group>"; };
 		5D8B60BD28FE4567003A0924 /* PathMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathMenu.swift; sourceTree = "<group>"; };
 		5D8B60BF28FE48EE003A0924 /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		5D8B60C128FE6171003A0924 /* GlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowView.swift; sourceTree = "<group>"; };
@@ -996,6 +1000,14 @@
 			path = LimitTextEditor;
 			sourceTree = "<group>";
 		};
+		5D75F5D12967E9FB000156B1 /* Fourth */ = {
+			isa = PBXGroup;
+			children = (
+				5D75F5D22967EA26000156B1 /* DemoCalendarView.swift */,
+			);
+			path = Fourth;
+			sourceTree = "<group>";
+		};
 		5D8B60BC28FE4558003A0924 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1197,6 +1209,7 @@
 				5DA250B328BEFCF9009F908E /* First */,
 				5DA250B428BEFE9B009F908E /* Seconds */,
 				5DA250B528BEFEFF009F908E /* Thrid */,
+				5D75F5D12967E9FB000156B1 /* Fourth */,
 			);
 			path = Alba;
 			sourceTree = "<group>";
@@ -1223,9 +1236,10 @@
 		5DA250B528BEFEFF009F908E /* Thrid */ = {
 			isa = PBXGroup;
 			children = (
-				5DA250C028BEFF9F009F908E /* SalaryListCalendarView.swift */,
 				5D3ABB29290FAB660088E9C1 /* CalendarView.swift */,
+				5DA250C028BEFF9F009F908E /* SalaryListCalendarView.swift */,
 				5D3AB8C5290BB3740088E9C1 /* SalaryListCalendarViewModel.swift */,
+				5D3817E4296BF58200E21053 /* SalaryInfoView.swift */,
 			);
 			path = Thrid;
 			sourceTree = "<group>";
@@ -1534,6 +1548,7 @@
 				5D17662128BCA401002FEE39 /* DraggableMap.swift in Sources */,
 				5D24D42428B6FDAC0022CFC9 /* LeaderboardView.swift in Sources */,
 				5D1E272A28C17BEC00C05FF9 /* SalaryDetailView.swift in Sources */,
+				5D3817E5296BF58200E21053 /* SalaryInfoView.swift in Sources */,
 				5D17654C28B86776002FEE39 /* MapViewUI.swift in Sources */,
 				5D1765CF28B8B0D7002FEE39 /* NutritionFact.swift in Sources */,
 				5D1765AD28B8983E002FEE39 /* EncodedModelIerator.swift in Sources */,
@@ -1558,6 +1573,7 @@
 				5DA250A328BEF0EA009F908E /* ChefSecretsView.swift in Sources */,
 				5D24D41128B6F7580022CFC9 /* ContentView.swift in Sources */,
 				5D17653C28B76AD9002FEE39 /* Place.swift in Sources */,
+				5D75F5D32967EA26000156B1 /* DemoCalendarView.swift in Sources */,
 				5D17652A28B75163002FEE39 /* MovieStore.swift in Sources */,
 				5D9B2B6B28CFFB8F007EA40A /* TaxiView.swift in Sources */,
 				5D17655028B87E5E002FEE39 /* TitleView.swift in Sources */,

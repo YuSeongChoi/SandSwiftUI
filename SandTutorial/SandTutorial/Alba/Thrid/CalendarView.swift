@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CalendarView: View {
+struct CalendarView<Content:View>: View {
     
     @Binding var selectedDate:Date
     
@@ -29,10 +29,13 @@ struct CalendarView: View {
         let components = Calendar.current.dateComponents([.weekday], from: firstDayOfMonth)
         return (components.weekday ?? 0) - 1
     }
+    
     var start:Int {
         startingSpaces == 0 ? startingSpaces + 7 : startingSpaces
     }
     
+    @ViewBuilder
+    let content: (Int) -> (Content)
     
     var body: some View {
         VStack(spacing: 0) {
@@ -50,16 +53,20 @@ struct CalendarView: View {
                         ForEach(1..<8){ column in
                             let count:Int = column + (row * 7)
                             let day:Int = count - start
-                            if day < 1 || (count - start > daysInMonth){
+                            if day < 1 || (count - start > daysInMonth) {
                                 Text("")
                                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                            } else{
-                                Text(String(day))
-                                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                                    .foregroundColor(column == 1 ? .red : .black)
-                                    .onTapGesture {
-                                        print("Tap row : \(row), column : \(column)")
-                                    }
+                            } else {
+                                VStack {
+                                    Text(String(day))
+                                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                                        .foregroundColor(column == 1 ? .red : .black)
+                                        .onTapGesture {
+                                            print("Tap row : \(row), column : \(column)")
+                                        }
+                                    
+                                    content(day)
+                                }
                             }
                         }
                         .padding(.top, 1)
@@ -68,8 +75,8 @@ struct CalendarView: View {
                 }
             }
         }
-        
     }
+    
 }
 
 

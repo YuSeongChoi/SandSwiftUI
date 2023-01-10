@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="69" height="25" viewBox="0 0 69 25">
+    <path data-name="Shape 95 copy 5" transform="translate(1 1)" style="fill:#f8f8f8;stroke:#eaeaea;stroke-width:2px" d="M0 0h67v23H0z"/>
+    <text data-name="재계산" transform="translate(25.5 17.5)" style="fill:#1a1a1a;font-size:13px;font-family:NotoSansCJKkr-Medium,Noto Sans CJK KR;font-weight:500;letter-spacing:-.04em"><tspan x="0" y="0">재계산 </tspan></text>
+    <path data-name="패스 8207" d="m1085.078 128.125 2.5 2.5 2.5-2.5z" transform="translate(-1067.578 -115.625)" style="fill:#f7b400"/>
+    <path data-name="패스 8208" d="m1012.267 111.172-2.5-2.5-2.5 2.5z" transform="translate(-999.767 -98.672)" style="fill:#f7b400"/>
+    <path data-name="패스 8209" d="M1042.855 87.438h-2a4 4 0 0 0-6.828-2.828l-1.414-1.414a6 6 0 0 1 10.243 4.243z" transform="translate(-1021.855 -74.938)" style="fill:#f7b400"/>
+    <path data-name="패스 8210" d="M1024.938 134.125a6.007 6.007 0 0 1-6-6h2a4 4 0 0 0 6.829 2.828l1.414 1.414a5.959 5.959 0 0 1-4.243 1.758z" transform="translate(-1009.938 -115.625)" style="fill:#f7b400"/>
+</svg>

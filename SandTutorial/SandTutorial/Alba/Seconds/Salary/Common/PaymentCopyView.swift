@@ -68,7 +68,7 @@ struct PaymentCopyView: View {
                 .fullScreenCover(isPresented: $selectedMonthToggle) {
                     // TODO: YearMonth Picker
                     YearMonthPickerView(selectedDate: $selectedDate) { 
-                        initDateToggle.toggle()
+                        initDateToggle = true
                     }
                         
                 }

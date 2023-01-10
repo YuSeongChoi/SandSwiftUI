@@ -12,6 +12,13 @@ struct SalaryListCalendarView: View {
     @Environment(\.calendar) private var calendar
     @StateObject private var viewModel = SalaryListCalendarViewModel()
     
+    /// 뷰 타입(리스트, 달력)
+    @State private var viewModeToggle: Bool = false
+    /// 주휴수당
+    @State private var holidayPayToggle: Bool = false
+    /// 급여입력
+    @State private var salaryDetailToggle: Bool = false
+    
     private var hideNextButton:Bool {
         calendar.isDate(viewModel.selectedDate, equalTo: Date(), toGranularity: .month) || viewModel.selectedDate >= viewModel.currentDate
     }
@@ -26,18 +33,19 @@ struct SalaryListCalendarView: View {
             paymentInfoView()
             // Bottom View
             dividerView
-//            bottomListView()
-            CalendarView(selectedDate: $viewModel.selectedDate)
+            if viewModeToggle {
+                bottomListView()
+            } else {
+//                CalendarView(selectedDate: $viewModel.selectedDate)
+                CalendarView(selectedDate: $viewModel.selectedDate) { day in
+                    VStack {
+                        Text("\(day)")
+                            .foregroundColor(.blue)
+                    }
+                }
+            }
         }
         
-    }
-    
-    @ViewBuilder
-    private var dividerView: some View {
-        Text(" ")
-            .frame(maxWidth: .infinity)
-            .frame(height: 10)
-            .background(Color(uiColor: .systemGray5))
     }
     
     @ViewBuilder
@@ -104,10 +112,15 @@ struct SalaryListCalendarView: View {
                 Spacer()
                 Button {
                     // MARK: 일정 수정
+                    viewModeToggle.toggle()
                 } label: {
-                    Text(Image(systemName: "list.bullet"))
-                        .font(.system(size: 24))
-                        .foregroundColor(.yellow)
+                    if viewModeToggle {
+                        Image(systemName: "calendar")
+                            .foregroundColor(.yellow)
+                    } else {
+                        Image(systemName: "list.bullet")
+                            .foregroundColor(.yellow)
+                    }
                 }
             }
             HStack {
@@ -125,7 +138,10 @@ struct SalaryListCalendarView: View {
                         .foregroundColor(.gray)
                 } icon: {
                     Image(systemName: "checkmark.square")
-                        .foregroundColor(.gray)
+                        .foregroundColor(holidayPayToggle ? .yellow : .gray)
+                }
+                .onTapGesture {
+                    holidayPayToggle.toggle()
                 }
                 Spacer()
                 Text("25,156 원")
@@ -140,13 +156,16 @@ struct SalaryListCalendarView: View {
                 Spacer()
                 Text("3,215,416 원")
                     .font(.system(size: 18))
-                Button {
-                    // TODO: 급여합계
+                
+                NavigationLink {
+                    // MARK: 급여합계
+                    SalaryInfoView()
+                        .navigationTitle("급여 입력")
                 } label: {
-                    Text(Image(systemName: "chevron.right"))
-                        .font(.system(size: 18))
+                    Image(systemName: "chevron.right")
                         .foregroundColor(Color(.systemGray3))
                 }
+
             }
         }
         .padding(EdgeInsets(top: 15, leading: 22, bottom: 15, trailing: 22))
@@ -171,6 +190,14 @@ struct SalaryListCalendarView: View {
         }
         .listStyle(.plain)
         .padding(.bottom, 1)
+    }
+    
+    @ViewBuilder
+    private var dividerView: some View {
+        Text(" ")
+            .frame(maxWidth: .infinity)
+            .frame(height: 10)
+            .background(Color(uiColor: .systemGray5))
     }
     
 }

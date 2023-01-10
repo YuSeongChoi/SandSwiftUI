@@ -135,9 +135,13 @@ struct SalaryDetailView: View {
                 }
             }
             .font(.system(size: 13))
-            Text(Image(systemName: "chevron.right"))
-                .frame(width: 24, height: 24)
-                .foregroundColor(.gray)
+            
+            NavigationLink {
+                SalaryInfoView()
+            } label: {
+                Image(systemName: "chevron.right")
+                    .foregroundColor(.gray)
+            }
         }
         .padding(EdgeInsets(top: 15, leading: 22, bottom: 15, trailing: 22))
     }

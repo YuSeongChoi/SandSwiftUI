@@ -47,16 +47,12 @@ struct YearMonthPickerView: View {
                             Text(verbatim: "\(year)년")
                         }
                     }
-                    .compositingGroup()
-                    .clipped()
                     
                     Picker(selection: $selectedMonth, label: Text("")) {
                         ForEach(months, id: \.self) { month in
                             Text("\(month)월")
                         }
                     }
-                    .compositingGroup()
-                    .clipped()
                 }
                 .pickerStyle(.wheel)
             }
